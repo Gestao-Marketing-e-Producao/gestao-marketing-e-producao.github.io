@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 186">
+  <g transform="translate(8 14) scale(1.2)"><g fill="none" stroke="#FFD60A" stroke-width="22" stroke-linejoin="miter" stroke-miterlimit="10">
+  <path d="M77.6 22.4 A39 39 0 1 0 89 50 H54"/>
+  <path d="M126 100 V1 L162 56 L198 1 V100" stroke-linejoin="bevel"/>
+  <path d="M241 100 V11 H266 A25 25 0 0 1 266 61 H252"/>
+</g></g>
+  <g fill="#FFD60A"><rect x="10" y="148" width="118" height="9" rx="4.5"/><rect x="138" y="148" width="118" height="9" rx="4.5" opacity=".6"/><rect x="266" y="148" width="108" height="9" rx="4.5" opacity=".3"/></g>
+  <text x="10" y="182" font-family="Inter,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" textLength="364" lengthAdjust="spacingAndGlyphs">GESTÃO MARKETING E PRODUÇÃO</text>
+</svg>
