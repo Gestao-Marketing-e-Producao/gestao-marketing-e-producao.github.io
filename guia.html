@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guia do MGP · Marketing, Gestão &amp; Produção</title>
+<meta name="description" content="Como entrar e usar o MGP — Marketing, Gestão &amp; Produção: guia da Direção, do Marketing, dos Solicitantes e dos Agentes de IA.">
+<meta name="theme-color" content="#2F3536">
+<link rel="icon" href="img/icone-192.png">
+<style>
+:root{--azul:#FFD91E;--marinho:#2F3536;--texto:#111111;--suave:#5C5C5C;--borda:#DDDDDD;--fundo:#EEEEEE;
+  --cor:#3A4143;--cor-esc:#111111;--cor-clara:#FFF6C2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--texto);background:var(--fundo);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--cor)}
+.topo{color:#fff!important;background:#2F3536;border-bottom:6px solid #FFD91E;padding:36px 22px 92px}
+.topo .dentro{max-width:1040px;margin:0 auto}
+.topo img{width:200px;max-width:70%;display:block}
+.etq{display:inline-block;color:#FFD91E;border-color:#FFD91E!important;margin-top:28px;font-size:12px;font-weight:700;letter-spacing:.16em;border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:5px 12px}
+.topo h1{font-size:clamp(28px,4.4vw,44px);line-height:1.1;margin:14px 0 10px;letter-spacing:-.02em}
+.topo p{color:#D7DADB;max-width:640px;margin:0;font-size:17px}
+main{max-width:1040px;margin:-64px auto 0;padding:0 16px 60px}
+.escolha{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px}
+.porta{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--texto);background:#fff;border-radius:16px;padding:20px;border:1px solid var(--borda);box-shadow:0 8px 28px rgba(15,23,42,.08);border-top:6px solid var(--c);transition:transform .15s}
+.porta:hover{transform:translateY(-2px)}
+.porta b{font-size:19px}
+.porta span{color:var(--suave);font-size:14px}
+.porta em{font-style:normal;margin-top:6px;font-weight:700;color:var(--c);font-size:14px}
+.abas{position:sticky;top:0;z-index:5;display:flex;gap:6px;background:var(--fundo);padding:16px 0 10px;margin-top:22px;overflow-x:auto}
+.abas button{border:1px solid var(--borda);background:#fff;border-radius:999px;padding:9px 16px;font:inherit;font-weight:600;cursor:pointer;white-space:nowrap;color:var(--texto)}
+.abas button.ativa{background:var(--c);border-color:var(--c);color:#fff}
+.setor{display:none;scroll-margin-top:86px}
+.setor.ativo{display:block}
+.capa{border-left:8px solid #FFD91E;border-radius:18px;color:#fff;padding:26px;margin:8px 0 18px;background:linear-gradient(140deg,var(--cor),var(--cor-esc))}
+.capa h2{margin:0 0 6px;font-size:28px;letter-spacing:-.01em}
+.capa p{margin:0;opacity:.92;max-width:720px}
+.link-caixa{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:10px 12px}
+.link-caixa code{font-size:14px;overflow-wrap:anywhere;flex:1 1 240px;color:#fff;font-family:ui-monospace,Consolas,monospace}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:10px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none}
+.btn-claro{background:#fff;color:var(--cor-esc)}
+.btn-borda{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6)}
+.bloco{background:#fff;border:1px solid var(--borda);border-radius:16px;padding:22px;margin-bottom:16px}
+.bloco h3{margin:0 0 4px;font-size:19px;display:flex;align-items:center;gap:10px}
+.bloco h3 .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--cor-clara);color:var(--cor);display:grid;place-items:center;font-size:14px}
+.bloco > p.sub{margin:0 0 14px;color:var(--suave)}
+ol.passos{counter-reset:p;list-style:none;margin:0;padding:0;display:grid;gap:10px}
+ol.passos li{counter-increment:p;position:relative;padding:12px 14px 12px 52px;background:#FAFBFD;border:1px solid var(--borda);border-radius:12px}
+ol.passos li::before{content:counter(p);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--cor);color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center}
+.grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:12px}
+.item{border:1px solid var(--borda);border-radius:12px;padding:14px 16px;background:#FAFBFD}
+.item b{display:block;margin-bottom:4px}
+.item p{margin:0;color:#334155;font-size:15px}
+.tag{display:inline-block;background:var(--cor-clara);color:var(--cor);font-weight:700;font-size:12px;border-radius:999px;padding:2px 9px;margin:2px 2px 0 0}
+.botao-nome{display:inline-block;background:#fff;border:1px solid var(--borda);border-radius:7px;padding:0 7px;font-weight:600;font-size:14px;white-space:nowrap}
+.alerta{border-left:4px solid var(--cor);background:var(--cor-clara);border-radius:10px;padding:12px 14px;margin:12px 0 0;font-size:15px}
+.pode,.naopode{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.pode li::before{content:"✓";color:#16A34A;font-weight:800;margin-right:8px}
+.naopode li::before{content:"✕";color:#DC2626;font-weight:800;margin-right:8px}
+.etapas{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.etapas span{font-size:13px;border-radius:999px;padding:4px 10px;background:#F1F5F9;border:1px solid var(--borda)}
+details{border:1px solid var(--borda);border-radius:12px;background:#fff;margin-bottom:10px}
+summary{cursor:pointer;padding:14px 16px;font-weight:600}
+details p{margin:0;padding:0 16px 14px;color:#334155}
+footer{text-align:center;color:var(--suave);font-size:13px;padding:24px 16px 40px}
+@media (max-width:600px){.topo{color:#fff!important;padding:26px 18px 84px}.capa{border-left:8px solid #FFD91E;padding:20px}.bloco{padding:18px}}
+@media print{.abas,.escolha,.btn{display:none!important}.setor{display:block!important;page-break-before:always}.topo{color:#fff!important;padding-bottom:30px}main{margin-top:10px}}
+</style>
+</head>
+<body>
+<header class="topo"><div class="dentro">
+  <img src="img/mgp-logo.png" alt="MGP · Marketing, Gestão &amp; Produção">
+  <span class="etq">GUIA DE ACESSO E USO</span>
+  <h1>Como entrar e usar o MGP</h1>
+  <p>O <b>MGP — Marketing, Gestão &amp; Produção</b> organiza a agenda, os pedidos, o quadro de produção, as entregas e os <b>agentes de IA</b> da equipe de marketing de qualquer empresa. Funciona no celular, no tablet e no computador.</p>
+</div></header>
+<main>
+  <div class="escolha">
+    <a class="porta" style="--c:#454C4F" href="#direcao" data-ir="direcao"><b>Direção</b><span>Visão geral: agenda, produção, indicadores e equipes.</span><em>Ver o guia →</em></a>
+    <a class="porta" style="--c:#111111" href="#marketing" data-ir="marketing"><b>Marketing</b><span>Coordenação e equipe: produção, agenda, Drive e agentes de IA.</span><em>Ver o guia →</em></a>
+    <a class="porta" style="--c:#5C5C5C" href="#solicitantes" data-ir="solicitantes"><b>Solicitantes</b><span>Vendedores, corretores ou unidades que pedem produções.</span><em>Ver o guia →</em></a>
+    <a class="porta" style="--c:#B38F00" href="#ia" data-ir="ia"><b>Agentes de IA</b><span>Planos, posts, roteiros e briefings no tom da sua empresa.</span><em>Ver o guia →</em></a>
+  </div>
+
+  <nav class="abas" aria-label="Setores">
+    <button data-aba="geral" class="ativa" style="--c:#2F3536">Para todos</button>
+    <button data-aba="direcao" style="--c:#454C4F">Direção</button>
+    <button data-aba="marketing" style="--c:#111111">Marketing</button>
+    <button data-aba="solicitantes" style="--c:#5C5C5C">Solicitantes</button>
+    <button data-aba="ia" style="--c:#B38F00">Agentes de IA</button>
+    <button data-aba="implantar" style="--c:#2F3536">Implantar na empresa</button>
+  </nav>
+
+  <section class="setor ativo" id="geral">
+    <div class="bloco"><h3><span class="n">1</span>Como entrar</h3><p class="sub">Cada setor recebe da Coordenação de Marketing o seu próprio link (com o nome da empresa nele).</p>
+      <ol class="passos">
+        <li>Abra o link que você recebeu pelo WhatsApp.</li>
+        <li>Primeira vez? Toque em <span class="botao-nome">Pedir acesso</span>, preencha nome, e-mail e WhatsApp e envie.</li>
+        <li>Quando a Coordenação de Marketing aprovar, toque em <span class="botao-nome">Primeiro acesso</span> e crie a sua senha com o mesmo e-mail.</li>
+        <li>Pronto: daí em diante é só <span class="botao-nome">Entrar</span> com e-mail e senha.</li>
+      </ol>
+      <div class="alerta">Esqueceu a senha? Toque em <span class="botao-nome">Esqueci a senha</span> na tela de entrada. Ninguém da equipe precisa saber a sua senha.</div></div>
+    <div class="bloco"><h3><span class="n">2</span>Instale como aplicativo</h3><p class="sub">O MGP abre direto no navegador e pode virar um ícone no aparelho.</p>
+      <div class="grade">
+        <div class="item"><b>Computador (Chrome ou Edge)</b><p>Na tela de entrada, toque em <span class="botao-nome">⤓ Instalar</span>, ou no ícone ⊕ da barra de endereço.</p></div>
+        <div class="item"><b>Android</b><p>Menu ⋮ do Chrome → <span class="botao-nome">Instalar app</span>.</p></div>
+        <div class="item"><b>iPhone e iPad</b><p>No Safari, toque em Compartilhar (□↑) → <span class="botao-nome">Adicionar à Tela de Início</span>.</p></div>
+      </div>
+      <div class="alerta"><a href="baixar.html">Abrir a página de instalação do MGP</a></div></div>
+    <div class="bloco"><h3><span class="n">3</span>Regras que valem para todos</h3>
+      <ul class="pode"><li>Cada pessoa vê só o que o seu setor precisa ver. Isso é garantido pelo banco de dados, não só pela tela.</li>
+        <li>Toda alteração importante fica registrada (quem fez e quando).</li>
+        <li>Os dados de uma empresa nunca aparecem para outra empresa.</li>
+        <li>Em <span class="botao-nome">Sugestões de melhoria</span>, qualquer pessoa pode propor ideias para o MGP.</li></ul></div>
+  </section>
+
+  <section class="setor" id="direcao">
+    <div class="capa" style="--cor:#454C4F;--cor-esc:#2F3536"><h2>Direção</h2><p>Visão geral do marketing da empresa: o que está sendo produzido, o que está atrasado e quem está entregando.</p></div>
+    <div class="bloco"><h3><span class="n">1</span>O que a Direção acompanha</h3>
+      <div class="grade">
+        <div class="item"><b>Painel</b><p>Recebidos, entregues, em andamento, atrasados e tempo médio de entrega no período.</p></div>
+        <div class="item"><b>Agenda</b><p>Calendário das captações e produções do Marketing.</p></div>
+        <div class="item"><b>Produção</b><p>O quadro com cada produção, a etapa atual, o responsável e o prazo.</p></div>
+        <div class="item"><b>Equipes</b><p>Quem está no Marketing e quem são os solicitantes, com os pedidos de acesso.</p></div>
+      </div></div>
+    <div class="bloco"><h3><span class="n">2</span>Limites</h3><ul class="naopode"><li>A Direção não altera senhas de ninguém.</li><li>Os acessos são liberados pela Coordenação de Marketing — ela é dona do processo.</li></ul></div>
+  </section>
+
+  <section class="setor" id="marketing">
+    <div class="capa" style="--cor:#3A4143;--cor-esc:#111111"><h2>Marketing</h2><p>A Coordenação e a equipe de Marketing (de 1 a 10 pessoas no início) comandam a produção da empresa.</p></div>
+    <div class="bloco"><h3><span class="n">1</span>O dia a dia</h3>
+      <div class="grade">
+        <div class="item"><b>Produção (quadro)</b><p>Cada pedido vira um cartão que anda pelas etapas até a entrega, com checklist, comentários e prazo.</p></div>
+        <div class="item"><b>Agenda</b><p>Horários de atendimento, captações marcadas, feriados e indisponibilidades.</p></div>
+        <div class="item"><b>Drive do Marketing</b><p>Link da pasta de materiais da empresa, visível só para o Marketing.</p></div>
+        <div class="item"><b>Agentes de IA</b><p>Planejamento, posts, roteiros e briefings com o perfil da empresa já incluído.</p></div>
+      </div>
+      <div class="etapas"><span>Pedido recebido</span><span>Agendado</span><span>Captação</span><span>Edição de fotos</span><span>Edição de vídeo</span><span>Aprovação</span><span>Entregue</span></div></div>
+    <div class="bloco"><h3><span class="n">2</span>Só a Coordenação de Marketing</h3>
+      <ul class="pode"><li>Aprova os acessos da Direção, da equipe de Marketing e dos solicitantes.</li>
+        <li>Preenche o <span class="botao-nome">Perfil da empresa e IA</span>: público, tom de voz, canais, objetivos e a chave gratuita do Gemini.</li>
+        <li>Ajusta o vocabulário: "Produto/Vendedor", "Imóvel/Corretor", "Curso/Professor"…</li></ul></div>
+  </section>
+
+  <section class="setor" id="solicitantes">
+    <div class="capa" style="--cor:#5C5C5C;--cor-esc:#3A4143"><h2>Solicitantes</h2><p>Quem pede produções ao Marketing: vendedores, corretores, professores, unidades… cada empresa usa o seu nome.</p></div>
+    <div class="bloco"><h3><span class="n">1</span>Pedir uma produção</h3>
+      <ol class="passos"><li>Cadastre o item a divulgar (produto, imóvel, serviço…) ou importe uma planilha.</li>
+        <li>Toque em <span class="botao-nome">Agendar produção</span> e escolha um horário livre da agenda do Marketing.</li>
+        <li>Acompanhe o andamento e receba o material pronto no próprio MGP.</li></ol></div>
+    <div class="bloco"><h3><span class="n">2</span>Limites</h3><ul class="naopode"><li>Cada solicitante vê só os seus itens e as suas produções.</li><li>Os dados internos do Marketing não aparecem para solicitantes.</li></ul></div>
+  </section>
+
+  <section class="setor" id="ia">
+    <div class="capa" style="--cor:#2F3536;--cor-esc:#000000"><h2>Agentes de IA</h2><p>Nove agentes que já conhecem a empresa (segmento, público, tom de voz, canais e objetivos) e trabalham dentro da produção.</p></div>
+    <div class="bloco"><h3><span class="n">1</span>Os agentes</h3>
+      <div class="grade">
+        <div class="item"><b>🧭 Estrategista de Marketing</b><p>Plano do período com objetivos, campanhas, metas e indicadores.</p></div>
+        <div class="item"><b>🗓️ Planejador de Calendário</b><p>Calendário editorial por canal, com tema e chamada de cada post.</p></div>
+        <div class="item"><b>✍️ Redator de Posts e Anúncios</b><p>Legendas e anúncios em três versões, no tom da empresa.</p></div>
+        <div class="item"><b>🎬 Roteirista de Vídeos</b><p>Roteiros de Reels e vídeos, cena a cena.</p></div>
+        <div class="item"><b>📋 Briefing de Produção</b><p>Lista de fotos e tomadas para a captação, ligada ao cartão da produção.</p></div>
+        <div class="item"><b>💡 Gerador de Ideias</b><p>Ideias de conteúdo e campanhas, da mais fácil para a mais trabalhosa.</p></div>
+        <div class="item"><b>💬 Respostas para Clientes</b><p>Mensagens de WhatsApp e direct para cada situação.</p></div>
+        <div class="item"><b>🔎 Revisor de Qualidade</b><p>Revisa e melhora qualquer texto antes de publicar.</p></div>
+        <div class="item"><b>📈 Analista de Resultados</b><p>Lê os números da produção e das redes e sugere as próximas ações.</p></div>
+      </div></div>
+    <div class="bloco"><h3><span class="n">2</span>Dois jeitos de usar — os dois gratuitos</h3>
+      <div class="grade">
+        <div class="item"><b>Copiar pedido</b><p>O MGP monta o pedido completo; você cola no ChatGPT, Gemini ou Claude e guarda a resposta no histórico.</p></div>
+        <div class="item"><b>Gerar aqui</b><p>Com a chave gratuita do Google Gemini cadastrada pela Coordenação, a resposta sai direto no MGP.</p></div>
+      </div>
+      <div class="alerta">A chave da IA fica guardada só no servidor. Ninguém da equipe consegue vê-la depois de salva.</div></div>
+  </section>
+
+  <section class="setor" id="implantar">
+    <div class="capa" style="--cor:#3A4143;--cor-esc:#000000"><h2>Implantar o MGP na sua empresa</h2><p>O MGP se adapta ao segmento e à realidade de cada empresa, com uma equipe de marketing de 1 a 10 pessoas no início.</p></div>
+    <div class="bloco"><h3><span class="n">1</span>Como funciona</h3>
+      <ol class="passos"><li>Na tela de entrada do MGP, toque em <span class="botao-nome">Quero o MGP na minha empresa</span> e preencha os dados.</li>
+        <li>A Marca &amp; Estratégia analisa e cria o ambiente da empresa, já com o vocabulário do segmento.</li>
+        <li>A Coordenação de Marketing recebe o link e libera a equipe pelo WhatsApp.</li></ol>
+      <div class="etapas"><span>Imobiliárias</span><span>Varejo e lojas</span><span>Saúde e clínicas</span><span>Educação</span><span>Alimentação</span><span>Serviços</span><span>Automóveis</span><span>Outros segmentos</span></div>
+      <div class="alerta"><a href="./">Abrir o MGP</a> · Fale com a Marca &amp; Estratégia: <a href="https://wa.me/5551984168848">WhatsApp (51) 98416-8848</a></div></div>
+  </section>
+</main>
+<footer>MGP · Marketing, Gestão &amp; Produção · Tecnologia Marca &amp; Estratégia</footer>
+<script>
+  var abas = document.querySelectorAll('[data-aba]');
+  function abrir(id){ abas.forEach(function(b){ b.classList.toggle('ativa', b.dataset.aba === id); });
+    document.querySelectorAll('.setor').forEach(function(s){ s.classList.toggle('ativo', s.id === id); }); }
+  abas.forEach(function(b){ b.onclick = function(){ abrir(b.dataset.aba); history.replaceState(null, '', '#' + b.dataset.aba); }; });
+  document.querySelectorAll('[data-ir]').forEach(function(a){ a.onclick = function(e){ e.preventDefault(); abrir(a.dataset.ir); document.querySelector('.abas').scrollIntoView({behavior:'smooth'}); history.replaceState(null, '', '#' + a.dataset.ir); }; });
+  var h = location.hash.slice(1); if (h && document.getElementById(h)) abrir(h);
+</script>
+</body>
+</html>
